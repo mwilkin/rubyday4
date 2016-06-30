@@ -1,0 +1,17 @@
+<h1>Make Change</h1>
+<h2>Enter an integer representing the change and we'll tell you the fewest number of coins you'll get back</h2>
+<form action="/makechange" method="post">
+  <div class="form-group">
+     <label for="change"></label>
+     <input id="change" name="change" class="form-control" type="number">
+  </div>
+  <button type="submit" class="btn-success">Send</button>
+</form>
+<div class="results">
+  <% if @change %>
+    <h3>quarters: <%= @change[0] %></h3>
+    <h3>dimes: <%= @change[1] %></h3>
+    <h3>nickels: <%= @change[2] %></h3>
+    <h3>pennies: <%= @change[3] %></h3>
+  <% end %>
+</div>
