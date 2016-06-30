@@ -8,6 +8,16 @@ get('/') do
   @page_title="home"
   erb(:index)
 end
+get('/anagram') do
+  @page_title="anagram"
+  erb(:anagram)
+end
+post('/anagram') do
+  @page_title="anagram"
+
+
+  erb(:anagram)
+end
 
 get('/makechange') do
   @page_title = "makechange"
