@@ -1,0 +1,16 @@
+<h1>Allergy Score reloader</h1>
+<h2>Provide your allergy score and we'll tell you what your allergies are</h2>
+<form action="/allergies" method="post">
+  <div class="form-group">
+     <label for="score">Enter Allergy Score</label>
+     <input id="score" name="score" class="form-control" type="number">
+  </div>
+  <button type="submit" class="btn-success">Send</button>
+  </form>
+  <div class="results">
+  <% if @result %>
+    <% @result.each() do |value| %>
+      <p><%= value %></p>
+      <% end %>
+  <% end %>
+  </div>

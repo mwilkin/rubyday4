@@ -1,0 +1,20 @@
+<h1> Anagram</h1>
+<h2>Provide a word and a list of others words you want to check.</h2>
+<form action="/anagram" method="post">
+  <div class="form-group">
+     <label for="word">Enter a single word</label>
+     <input id="word" name="word" class="form-control" type="text">
+  </div>
+  <div class="form-group">
+     <label for="word_list">Enter a list words separated by spaces to check for an anagram</label>
+     <input id="word_list" name="word_list" class="form-control" type="text">
+  </div>
+  <button type="submit" class="btn-success">Send</button>
+  </form>
+  <div class="results">
+  <% if @result %>
+    <% @result.each() do |key, value| %>
+      <p><%= key %>: <%= value %></p>
+      <% end %>
+  <% end %>
+  </div>
