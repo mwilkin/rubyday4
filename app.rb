@@ -16,6 +16,7 @@ end
 
 post('/makechange') do
   @page_title = "makechange"
-  @change = params.fetch('change').to_i.makechange()
+  @till = [params.fetch('quarters').to_i, params.fetch('dimes').to_i, params.fetch('nickels').to_i, params.fetch('pennies').to_i]
+  @change = params.fetch('change').to_i.makechange(@till)
   erb(:makechange)
 end

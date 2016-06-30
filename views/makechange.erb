@@ -2,8 +2,24 @@
 <h2>Enter an integer representing the change and we'll tell you the fewest number of coins you'll get back</h2>
 <form action="/makechange" method="post">
   <div class="form-group">
-     <label for="change"></label>
+     <label for="change">Amount of change</label>
      <input id="change" name="change" class="form-control" type="number">
+  </div>
+  <div class="form-group">
+     <label for="quarters">Number of Quarters in the till</label>
+     <input id="quarters" name="quarters" class="form-control" type="number" default="100" value="100">
+  </div>
+  <div class="form-group">
+     <label for="dimes">Number of Dimes in the till</label>
+     <input id="dimes" name="dimes" class="form-control" type="number" default="100" value="100">
+  </div>
+  <div class="form-group">
+     <label for="nickels">Number of Nickels in the till</label>
+     <input id="nickels" name="nickels" class="form-control" type="number" default="100" value="100">
+  </div>
+  <div class="form-group">
+     <label for="pennies">Number of Pennies in the till</label>
+     <input id="pennies" name="pennies" class="form-control" type="number" default="100" value="100">
   </div>
   <button type="submit" class="btn-success">Send</button>
 </form>
@@ -13,5 +29,6 @@
     <h3>dimes: <%= @change[1] %></h3>
     <h3>nickels: <%= @change[2] %></h3>
     <h3>pennies: <%= @change[3] %></h3>
+    <%= @arr %>
   <% end %>
 </div>
